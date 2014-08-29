@@ -5,7 +5,7 @@
 //
 //  first compile the program
 //      java HelloWorld.java
-//  run the program
+//  run the program 
 //      java HelloWorld//
 
 //  define a class
@@ -22,7 +22,7 @@ public class HelloWorld{
     System.out.println("#                                  #");
     System.out.println("####################################");
     System.out.println("####################################");
-    System.out.println("test");
+    System.out.println("testing");    
     
     //test/testtest
  }

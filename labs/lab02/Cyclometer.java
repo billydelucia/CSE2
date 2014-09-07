@@ -2,7 +2,7 @@
 //Billy DeLucia
 //CSE 002
 //
-public class Cyclometer2{
+public class Cyclometer{
     public static void main(String [ ] args){
         double secsTrip1=480; //How long trip 1 was
         double secsTrip2=3220; //How long trip 2 was

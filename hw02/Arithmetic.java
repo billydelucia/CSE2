@@ -41,7 +41,7 @@ public class Arithmetic{
             double gSalesTax=(int)totalGlassesCost*taxPercent*100;
             double glassesSalesTax=gSalesTax/100;
             double gTotalAfterTax=(int)((totalGlassesCost+glassesSalesTax)*100);
-            double glassesTotalAfterTax=gTotalAfterTax/100;   //total cost of glasses after tax
+            double glassesTotalAfterTax=gTotalAfterTax/100.0;   //total cost of glasses after tax
             double tPerGlasses=(int)glassCost$*taxPercent*100;
             double taxPerGlasses=tPerGlasses/100;
             //Envelope total
@@ -62,35 +62,35 @@ public class Arithmetic{
         //output
             //Socks print
                 System.out.println("Socks");
-                System.out.println("Quantity           " +((nSocks))+ " ");
-                System.out.println("Cost per item     $" +(sockCost$)+ " ");
-                System.out.println("Tax per item      $" +(taxPerSock)+ " ");
-                System.out.println("Total before tax  $" +(totalSockCost)+ " ");
-                System.out.println("Sales Tax         $" +(socksSalesTax)+ " ");
-                System.out.println("Total after tax   $" +(socksTotalAfterTax)+ " ");
+                System.out.println("Quantity           " +((nSocks)));
+                System.out.println("Cost per item     $" +(sockCost$));
+                System.out.println("Tax per item      $" +(taxPerSock));
+                System.out.println("Total before tax  $" +(totalSockCost));
+                System.out.println("Sales Tax         $" +(socksSalesTax));
+                System.out.println("Total after tax   $" +(socksTotalAfterTax));
                 System.out.println(" ");
             //Glasses print
                 System.out.println("Glasses");
-                System.out.println("Quantity           " +(nGlasses)+ " ");
-                System.out.println("Cost per item     $" +(glassCost$)+ " ");
-                System.out.println("Tax per item      $" +(taxPerGlasses)+ " ");
-                System.out.println("Total before tax  $" +(totalGlassesCost)+ " ");
-                System.out.println("Sales Tax         $" +(glassesSalesTax)+ " ");
-                System.out.println("Total after tax   $" +(glassesTotalAfterTax)+ " ");
+                System.out.println("Quantity           " +(nGlasses));
+                System.out.println("Cost per item     $" +(glassCost$));
+                System.out.println("Tax per item      $" +(taxPerGlasses));
+                System.out.println("Total before tax  $" +(totalGlassesCost));
+                System.out.println("Sales Tax         $" +(glassesSalesTax));
+                System.out.println("Total after tax   $" +(glassesTotalAfterTax));
                 System.out.println(" ");
             //Envelope print
                 System.out.println("Envelope");
-                System.out.println("Quantity           " +(nEnvelopes)+ " ");
-                System.out.println("Cost per item     $" +(envelopeCost$)+ " ");
-                System.out.println("Tax per item      $" +(taxPerEnvelope)+ " ");
-                System.out.println("Total before tax  $" +(totalEnvelopeCost)+ " ");
-                System.out.println("Sales Tax         $" +(envelopeSalesTax)+ " ");
-                System.out.println("Total after tax   $" +(envelopeTotalAfterTax)+ " ");
+                System.out.println("Quantity           " +(nEnvelopes));
+                System.out.println("Cost per item     $" +(envelopeCost$));
+                System.out.println("Tax per item      $" +(taxPerEnvelope));
+                System.out.println("Total before tax  $" +(totalEnvelopeCost));
+                System.out.println("Sales Tax         $" +(envelopeSalesTax));
+                System.out.println("Total after tax   $" +(envelopeTotalAfterTax));
                 System.out.println(" ");
             //Total
-                System.out.println("Total before tax  $" +(totalCost)+ " ");
-                System.out.println("Total Sales Tax   $" +(totalTax)+ " ");
-                System.out.println("Total After Taxx  $" +(totalTax+totalCost)+ " ");
+                System.out.println("Total before tax  $" +(totalCost));
+                System.out.println("Total Sales Tax   $" +(totalTax));
+                System.out.println("Total After Taxx  $" +(totalTax+totalCost));
                 
         
         

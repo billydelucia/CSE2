@@ -11,14 +11,14 @@ public class Bicycle {
         Scanner input=new Scanner(System.in);
         //
         //recieving input from user for time and distance of trips
-        System.out.println("Enter the number of seconds:");
+        System.out.print("Enter the number of seconds: ");
         int seconds=input.nextInt( );
-        System.out.println("Enter the number of counts:");
-        int counts=input.nextInt( );        
+        System.out.print("Enter the number of counts: ");
+        int counts=input.nextInt( );
         //
         //calculations
         double diameter=27; //inches
-        double circumference=diameter*3.14159; //circumference of the wheel and the distance travelled per cout in inches
+        double circumference=diameter*3.14159; //circumference of the wheel and the distance travelled per count in inches
         double inchesPerFoot=12;
         double feetPerMile=5280;
         double milesPerCount=(circumference/inchesPerFoot)/feetPerMile;

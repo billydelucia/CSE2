@@ -30,10 +30,11 @@ public class IncomeTax {
             }
             
             //calculations
-        double tax=income*taxRate;
+        double tax=income*taxRate*1000;
         double taxRatePercentage=taxRate*100;
         //output
-        System.out.printf("The tax rate on $%2d,000 is %2.1f%, and the tax is $%5.1f",income,taxRatePercentage,tax);
+        System.out.printf("The tax rate on $%2d,000  is %2.1f%% and the tax is $%5.1f %n",income,taxRatePercentage,tax);
+        //System.out.println("The tax rate on " +income*1000+ " is " +taxRatePercentage+ "%, and the tax is " +tax);
         }
         else{
             System.out.println("You did not enter an int, Goodbye");

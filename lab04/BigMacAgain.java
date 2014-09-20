@@ -14,7 +14,7 @@ public class BigMacAgain {
         double costPerBigMac=2.22;
         double totalBigMacCost=0;
         
-        if (input.hasNextInt()) {
+        if (input.hasNextInt()){
             nBigMacs=input.nextInt();
             totalBigMacCost=nBigMacs*costPerBigMac;
             System.out.printf("You ordered %2d Big Macs for a cost of %2dx2.22 = %2.2f %n",nBigMacs,nBigMacs,totalBigMacCost);

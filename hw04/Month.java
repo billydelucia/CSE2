@@ -13,7 +13,7 @@ public class Month{
         if (input.hasNextInt()) {
             month=input.nextInt();
             odd= (month%2)==1;
-            if (month>1 || month<12){
+            if (month>=1 && month<=7){
                 if (odd){
                     System.out.println("The month has 31 days");
                 }
@@ -47,6 +47,14 @@ public class Month{
                     }
                 }
                 
+            }
+            else if (month>7 && month<=12){
+                if (!odd){
+                    System.out.println("The month has 31 days");
+                }
+                else{
+                    System.out.println("The month has 30 days");
+                }
             }
             else{
                 System.out.println("You did not enter an int between 1 and 12");

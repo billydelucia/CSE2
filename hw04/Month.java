@@ -13,7 +13,7 @@ public class Month{
         if (input.hasNextInt()) {
             month=input.nextInt();
             odd= (month%2)==1;
-            if (month>=1 && month<=7){
+            if (month>=1 && month>=7){
                 if (odd){
                     System.out.println("The month has 31 days");
                 }

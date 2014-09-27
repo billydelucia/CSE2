@@ -12,9 +12,17 @@ import java.util.Scanner;
 public class RandomGames{
     public static void main(String[ ] args) {
         char game;
+        String input1;
         Scanner input=new Scanner(System.in);
         System.out.print("Enter R or r for Roulette, C or c for craps, P or p for pick a card- ");
-        game=input.next( ).charAt(0);
+        
+        input1=input.next( );
+        if (input1.length()>1){
+            System.out.println("a single charachter was expected");
+            return; // program terminated
+        }
+        game = input1.charAt(0);
+        
         switch (game){
             case 'R':
             case 'r': // Roulette code
@@ -59,6 +67,8 @@ public class RandomGames{
             break;
             
             default: System.out.println("'"+game+"' is not one of 'R', 'r', 'C', 'c', 'P', or 'p'");
+            return; //program terminated
+            
             
         }
     }

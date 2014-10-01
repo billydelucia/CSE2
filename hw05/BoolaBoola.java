@@ -5,6 +5,7 @@
 //
 //program creates 3 random true false statements and a boolean statement with them.
 //the user must guess if the boolean statement is true or not
+//thr program then checks if the guess was corect or not
 import java.util.Scanner;
 public class BoolaBoola{
     public static void main(String[ ] args){
@@ -39,6 +40,10 @@ public class BoolaBoola{
             break;
         }
         String input1=input.next();
+        if (input1.lenth()>1){
+            System.out.println("Expected a single charachter");
+            return;
+        }
         char TorF=input1.charAt(0);
         switch (TorF){
             case 't':
@@ -49,7 +54,7 @@ public class BoolaBoola{
             case 'F':
                 guess=false;
                 break;
-            default: System.out.println("Error");
+            default: System.out.println("You did not enter T,t,F or f");
             return;
         }
         

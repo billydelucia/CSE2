@@ -10,7 +10,7 @@ public class BaseTransformer {
 	public static void main(String[] args){
 		Scanner input=new Scanner(System.in);
 		System.out.println("This program translates diffent bases into decimal.");
-		System.out.println("Accpeted bases are binary, base 2, octal, base 8, and hexidecimal, base 16");
+		System.out.println("Accpeted bases are binary, base 2, octal, base 8, and hexadecimal, base 16");
 		System.out.println("Please input the base of your input");
 		
 		// Check if desired input base is acceptable 
@@ -38,7 +38,7 @@ public class BaseTransformer {
 		int number=0;
 		switch (base){
 			case 2:
-			case 8:
+			case 8:		//checking if input is a pure integer for base 2 and 8
 				if (!input.hasNextInt()){
 					System.out.println("You did not enter an integer");
 					return;
@@ -51,14 +51,14 @@ public class BaseTransformer {
 				char hex;
 				System.out.println("Enter each didgit idividually hitting 'enter' between each");
 				System.out.println("Ender 'done' after last digit");
-				while (true){
-					hexidecimal=input.next();
-					if (hexidecimal.equals(done)){
+				while (true){						//allows user to input infinite digits unil 'dond'
+					hexidecimal=input.next();		// accepts single hexadecimal digit from user
+					if (hexidecimal.equals(done)){	//allows user to end infinite loop
 						break;
 					}
 					hex=hexidecimal.charAt(0);
 					int remainder=number;
-					switch (hex){
+					switch (hex){		//changing hexadecimal input into base 10 numbers
 						case '1':
 							add=1;
 							break;
@@ -110,15 +110,16 @@ public class BaseTransformer {
 						case 'F':
 							add=15;
 							break;
+						default:
+							System.out.println("Incorrect hexadecimal format");
 					}
-					//digit=remainder%10;
-					//remainder/=10;
+					//
 					basepower*=base;
 					if (count==0){
 						basepower=1;
 					}
 					add*=basepower;
-					sum+=add;
+					sum+=add;		//base 10 tally
 					count++;
 					
 				}
@@ -150,7 +151,7 @@ public class BaseTransformer {
 					}
 				}
 				break;
-			case 16:	//Hexidecimal
+			case 16:	//Hexadecimal
 				System.out.println("This base is currently in beta mode");
 				break;
 		}

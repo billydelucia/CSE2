@@ -19,6 +19,7 @@ public class Root {
         double number=input.nextDouble();
         if (number<0){
             System.out.println("Number is negative");
+            return;
         }
         double low=0;           //will be used as the lower bound of the range
         double high=number+1;   //will be used as the upper bound of the range
@@ -26,22 +27,22 @@ public class Root {
         double tolerance=0.0000001;     // required level of accuracy
         double range=high-low;
         double middleSquared=0;
-        int max=100000, count=0;
+        //int max=100000, count=0;
         
         while (range>tolerance){
             middle=(low+high)/2;
             middleSquared=middle*middle;
-            if (middleSquared>number){
+            if (middleSquared>number){          //narrowing range from upper bound
                 high=middle;
-            }
-            if (middleSquared<number){
+            }                                       
+            if (middleSquared<number){          // narrowing range from lower bound
                 low=middle;
             }
-            count++;
+            /*count++;
             if (count>max){
                 System.out.println("max cycles reached");
                 break;
-            }
+            }*/
             //System.out.println(middleSquared);
             range=high-low;
         }

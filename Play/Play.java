@@ -1,15 +1,24 @@
-///////////////////////////////
+///////////////////////////////////////////////////////////////////
+//Billy Delucia
+//CSE002
+//
+//Play file made for testing ideas and code 
 //
 import java.util.Scanner;
-
- public class Play {
-     public static void main(String [ ] args) {
-         char c= 'D';
-         int k=7;
-         System.out.println((char) (c + k - 5));
-         int f=2;
-         int d=3;
-         int m;
-         m= (d<3) ? System.out.println("3"): System.out.println("not 3");
-     }
- }
+public class Play {
+	public static void main(String [] args){
+		Scanner input=new Scanner(System.in());
+		System.out.printlin("Enter int");
+		int user=input.nextInt();
+		int count=0;
+		//int i;
+		int j;
+		
+		for (int i=0; i<user; i++){
+			System.out.println("i: "+i);
+			for (j=0; j<count; j++){
+				System.out.println("	j: "+j);
+			}
+		}
+	}
+}

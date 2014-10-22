@@ -32,7 +32,7 @@ public class MoreLoops{
 	    }
 	    System.out.println();
 	}*/
-	int j=0,k=0;
+	int j,k;
 	while(j<n && j<40){
 	    k=0;
 	    while(k<j+1){
@@ -91,6 +91,7 @@ public class MoreLoops{
 	    }
 	    else if(n==4){
 	        System.out.println("Case 4");
+	        System.out.println("Case 5");
 	    }
 	    else if(n==5){
 	        System.out.println("Case 5");

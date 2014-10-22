@@ -53,7 +53,7 @@ public class Enigma3{
 
 /*
  * Error report:
- * I determined that k becomed zero by commenting it out and checking if the program ran
+ * I determined that k became zero by commenting it out and checking if the program ran
  * I then checked wich case ran in the second switch statment and it was case 98
  * I commented 1/k out of the final statement but there are multiple ways to fix this bug
  * 

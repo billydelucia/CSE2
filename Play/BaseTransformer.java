@@ -46,17 +46,17 @@ public class BaseTransformer {
 				number=input.nextInt();
 			break;
 			case 16:
-				String hexidecimal;
+				String hexadecimal;
 				String done="done";
 				char hex;
 				System.out.println("Enter each didgit idividually hitting 'enter' between each");
 				System.out.println("Ender 'done' after last digit");
 				while (true){						//allows user to input infinite digits unil 'dond'
-					hexidecimal=input.next();		// accepts single hexadecimal digit from user
-					if (hexidecimal.equals(done)){	//allows user to end infinite loop
+					hexadecimal=input.next();		// accepts single hexadecimal digit from user
+					if (hexadecimal.equals(done)){	//allows user to end infinite loop
 						break;
 					}
-					hex=hexidecimal.charAt(0);
+					hex=hexadecimal.charAt(0);
 					int remainder=number;
 					switch (hex){		//changing hexadecimal input into base 10 numbers
 						case '1':

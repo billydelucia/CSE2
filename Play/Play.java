@@ -6,6 +6,20 @@
 //
 import java.util.Scanner;
 public class Play {
+/*
+	public static int input(int scannerInput, int max, int min){
+		while(!scannerInput.hasNextInt){
+			Scanner input= new Scanner(System.in);
+			System.out.print("You did not enter and integer. Try again -");
+			scannerInput=input.nextInt;
+		}
+		while(scannerInput<min || scannerInput>max){
+			
+		}
+	}
+*/
+	public static int hasInt(int scannerInput)
+	
 	public static void main(String [] args){
 		Scanner input=new Scanner(System.in());
 		System.out.printlin("Enter int");

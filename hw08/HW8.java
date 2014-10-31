@@ -10,8 +10,9 @@ import java.util.Scanner;
 public class HW8{
     public static void main(String[] args){
         Scanner scan= new Scanner(System.in);
-        System.out.print("Enter 'C' or 'c' to continue, anything else to quit- ");
-    	char input=getInput(scan,"Cc");
+        System.out.print("Enter 'C' or 'c' to continue, anything else to quit- "); 
+    	char input=getInput(scan,"Cc");         // this doesn't actually quit the program as the last line would suggest
+    	// this is becasue I based my program off the sample outputs in the lab that suggested otherwise.
     	System.out.println("You entered '"+input+"'");
     	System.out.print("Enter 'y', 'Y', 'n', or 'N'- ");
     	input=getInput(scan,"yYnN",5); //give up after 5 attempts

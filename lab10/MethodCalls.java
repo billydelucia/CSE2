@@ -42,6 +42,10 @@ public class MethodCalls{
         if(a<0 ^ b<0){      //maintains negative or positive values (somewhat unclear if this is what was desired)
             add*=-1;
         }
+        else if(a<0 && b<0){
+            add*=-1;
+            a*=-1;
+        }
         int output=add+a;
         return output;
     }

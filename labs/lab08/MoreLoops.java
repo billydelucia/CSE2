@@ -32,7 +32,7 @@ public class MoreLoops{
 	    }
 	    System.out.println();
 	}*/
-	int j,k;
+	int j=0,k;
 	while(j<n && j<40){
 	    k=0;
 	    while(k<j+1){

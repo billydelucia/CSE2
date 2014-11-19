@@ -151,8 +151,24 @@ public class PokerOdds{
                 hand [k]=deck[draw];
                 deck [draw]=-1;
             }
+            int check=0;
+            for (int h=0; h<5; h++){
+                int pair1=hand[h];
+                //check=0;
+                for (int g=0; g<5; g++){
+                    if (h==g){
+                        continue;
+                    }
+                    int pair2=hand[g];
+                    if (pair1%13==pair2%13){
+                        check++;
+                        } 
+                    }
+                }
             
-            
+            if (check>2){
+                continue;
+            }
             for (int h=0; h<5; h++){
                 int pair1=hand[h];
                 for (int g=0; g<5; g++){
@@ -161,6 +177,7 @@ public class PokerOdds{
                     }
                     int pair2=hand[g];
                     if (pair1%13==pair2%13){
+                        
                         total++;
                        switch (pair1%13){
                             case 0 :
@@ -195,6 +212,7 @@ public class PokerOdds{
                                 break;
                             case 8:
                                 eight++;
+                                break;
                             case 9:
                                 nine++;
                                 break;
@@ -205,6 +223,7 @@ public class PokerOdds{
                     }
                 }
             }
+            
         
         }
          A/=2; K/=2; Q/=2; J/=2; two/=2; three/=2; four/=2; five/=2; six/=2; seven/=2; eight/=2; nine/=2; ten/=2;

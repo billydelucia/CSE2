@@ -54,7 +54,7 @@ public class FindDuplicates{
       return out;
     }
     
-    //
+    //Method checks if the array has a duplicate
     public static boolean hasDups(int [] a){
       int limit=a.length;
       for (int i=0; i<limit; i++){
@@ -72,7 +72,8 @@ public class FindDuplicates{
       return false;
     }
     
-    //
+    //Method checks how many match ups their are
+    // note that dubs counts each match up twoice as it goes through
     public static boolean exactlyOneDup(int [] a){
       int limit=a.length;
       int dubs=0;
@@ -88,7 +89,7 @@ public class FindDuplicates{
           }
         }
       }
-      boolean output= dubs==1;
+      boolean output= dubs==2;
       return output;
     }
 }

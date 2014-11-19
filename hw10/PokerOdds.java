@@ -25,6 +25,10 @@ public class PokerOdds{
         for (int k=0; k<5; k++){
             Random random=new Random();
             int draw=deck[random.nextInt(deck.length)];
+            if (draw<0){
+                    k--;
+                    continue;
+                }
             hand [k]=draw;
             hand [k]=deck[draw];
             deck [draw]=-1;
@@ -137,6 +141,11 @@ public class PokerOdds{
             for (int k=0; k<5; k++){
                 Random random=new Random();
                 int draw=deck[random.nextInt(deck.length)];
+                if (draw<0){
+                    k--;
+                    continue;
+                }
+                
                 hand [k]=draw;
                 hand [k]=deck[draw];
                 deck [draw]=-1;

@@ -12,8 +12,6 @@ public class raggedSort{
        for (int i=0; i<5;i++){
            raggedLength=i*3 + 5;
            Array[i]= new int [raggedLength];
-           //
-           //     System.out.println(Array[i].length);
            //Populate
            for (int j=0; j<raggedLength; j++){
                Array[i][j]=(int)(Math.random()*40);

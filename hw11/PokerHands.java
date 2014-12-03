@@ -29,6 +29,14 @@ public class PokerHands{
 		for (int i=0; i<5; i++){
 			suit=getSuit();
 			rank=getRank();
+			card=(suit*13)+rank;
+			for (int j=0; j<i; j++){
+				if(card==hand[j]){
+					System.out.println("You already entered this card");
+					i--;
+					continue;
+				}
+			}
 			if (rank==1){
 				frequency[12]++;	//Aces are high 
 			} 
@@ -38,7 +46,6 @@ public class PokerHands{
 			else{
 				frequency[rank-2]++;
 			}
-			card=(suit*13)+rank;
 			hand[i]=card;
 		}
 	}
@@ -211,6 +218,12 @@ public class PokerHands{
 		}
 		else if (matches[3]==1 && matches[2]==1){
 			System.out.println("This is a Full House");
+		}
+		else if (matches[3]==1){
+			System.out.println("This is a Three of a Kind");
+		}
+		else if (matches[2]==2){
+			System.out.println("This is a Two Pair");
 		}
 		else if (matches[2]==1){
 			System.out.println("This is a Pair");

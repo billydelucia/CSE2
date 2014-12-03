@@ -26,15 +26,15 @@ public class PokerHands{
 		int suit=0;
 		int rank=0;
 		int card=0;
-		for (int i=0; i<5; i++){
+		populate: for (int i=0; i<5; i++){
 			suit=getSuit();
 			rank=getRank();
 			card=(suit*13)+rank;
 			for (int j=0; j<i; j++){
 				if(card==hand[j]){
 					System.out.println("You already entered this card");
-					i--;
-					continue;
+					i--;				//cancels run of loop to allow a total of five cards regardless
+					continue populate;	//Doesnt enter card into hand 
 				}
 			}
 			if (rank==1){
@@ -201,7 +201,7 @@ public class PokerHands{
 			}
 		}
 		//boolean straight=false, flush=false, pair=false, three=false, four=false, 
-		if (straight(matches, frequency) && flush(hand) && frequency[11]==1){
+		if (straight(matches, frequency) && flush(hand) && frequency[12]==1){
 			System.out.println("This is a Royal Straight Flush");
 		}
 		else if (straight(matches, frequency) && flush(hand)){

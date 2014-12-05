@@ -36,15 +36,15 @@ public class LoopTheLoop {
             while (x<=nStars){
                 while (y<=0){
                     System.out.print("*");
-                    y++;
+                    y++;    //y increases to 0 
                 }
-                x++;
-                y-=x;
-                System.out.println("");
-            }
+                x++;    //x is increased until it reaches the number of stars
+                y-=x;   //y has x subratced from int making it one less than it was previosly every time
+                System.out.println("");     //enters a new line
+            }   
             System.out.print("Enter y or Y to go again- ");
-            char exit=input.next().charAt(0);
-            infinite= exit=='y' || exit== 'Y';
+            char exit=input.next().charAt(0);   //takes uesr input to end or go again
+            infinite= exit=='y' || exit== 'Y';  //checks if user wants to repeat the program
         }
     }
 }

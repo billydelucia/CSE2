@@ -17,6 +17,7 @@ public class Enigma3{
           n/=3;
           k-=7;
     }
+    System.out.println(n+k); //Added
     if(n*k%12< 12){
       n-=20;
       out+=n;
@@ -29,23 +30,29 @@ public class Enigma3{
       n=45;
       out+=n+k;
     }
+    System.out.println(n+k); //Added
     System.out.println((n+k));
     switch(n+k){      //switch 2
       case 114: 
         n-=11;
         k-=3;
+        System.out.println(n+k); //Added
         break;
       case 97:
         n-=14;
         k-=2;
+        System.out.println(n+k); //Added
         break;
       case 98:
         n/=5;
         k/=9;
+        System.out.println(n+k); //Added
       default:
         n-=3;
-        k-=5;
+        k-=5;//k=0 here
+        System.out.println(n+k); //Added
     }
+    System.out.println(n+k); //Added
      out+=1/n;// + 1/k;   
     System.out.println(out);
   }
@@ -53,7 +60,7 @@ public class Enigma3{
 
 /*
  * Error report:
- * I determined that k becomed zero by commenting it out and checking if the program ran
+ * I determined that k became zero by commenting it out and checking if the program ran
  * I then checked wich case ran in the second switch statment and it was case 98
  * I commented 1/k out of the final statement but there are multiple ways to fix this bug
  * 

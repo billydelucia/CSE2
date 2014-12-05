@@ -15,32 +15,13 @@ public class Play{
 			one[i]=(int)(Math.random()*length);
 		}
 		printArray(one);
-		int [] two=copyArray(one);
-		//minMaxAvg(one);
-		Isort(one);
+		minMaxAvg(one);
+		sort(one);
 		printArray(one);
-		sort(two);
-		printArray(two);
-		//int at=Bsearch(one);
-		//System.out.println(at);
-		//minMaxAvg(one);
+		int at=Bsearch(one);
+		System.out.println(at);
+		minMaxAvg(one);
 		
-	}
-	
-	public static void Isort(int [] array){
-		int sum=0, j=0;
-		for (int i=1; i<array.length; i++){
-			for (j=i; j>0; j--){
-					if (array[j]>array[j-1]){
-						break;
-					}
-					else {
-						swapMember(array,j-1,j);
-					}
-			}
-			sum+=j;
-		}
-		System.out.println(sum);
 	}
 	
 	public static void minMaxAvg(int [] A){
@@ -59,14 +40,6 @@ public class Play{
 		}
 		double average=(sum/A.length);
 		System.out.println("Max="+max+"  Min="+min+"  Average="+average+"   Sum="+sum);
-	}
-	
-	public static int [] copyArray(int [] a){
-		int [] output= new int [a.length];
-		for (int i=0; i<a.length; i++){
-			output[i]=a[i];
-		}
-		return output;
 	}
 	
 	public static int Bsearch(int [] A){
@@ -100,18 +73,15 @@ public class Play{
 	}
 	
 	public static void sort(int [] A){
-		int sum=0;
-		for(int i=0; i<A.length; i++){
+		for( int i=0; i<A.length; i++){
 			int min=findMinRange(A,i,A.length-1);
 			swapMember(A,i,min);
-			sum+=i;
 		}
-		System.out.println(sum);
 	}
 	
 	public static void swapMember( int [] A, int one, int two){
 		if( one<0 || one>A.length || two<0 || two>A.length){
-			System.out.println("Error: method swapMember");
+			System.out.println("Error");
 			return;
 		}
 		int temp=A[one];
@@ -121,7 +91,7 @@ public class Play{
 	
 	public static int findMinRange(int A [], int min, int max){
 		if (min>=max){
-			System.out.println("Error: method findMinRange");
+			System.out.println("Error");
 			return -1;
 		}
 		int index=max;

@@ -13,9 +13,16 @@ public class Enigma1{
   public static void main(String []arg){
     double percent;
     System.out.print("Enter a value for the percent (0, 1,...99)- ");
+    // Need to check if user entered number within bounds
     double x=((new Scanner(System.in)).nextDouble());
+    if (x>99 ||x<0){
+      System.out.println("You did not enter a number within the bounds of [0,99]");
+      return;
+    }
    System.out.println("You entered "+x+"%");
    //print out the proportion remaining for select percentages
+   System.out.println("The proprtion remaining is "+(1-x/100));
+   
    if(1-x/100==0.93)  //when the user enters 7
       System.out.println("The proportion remaining is "+0.93);
     else if(1-x/100==0.59)//when the user enters 41
@@ -34,7 +41,7 @@ public class Enigma1{
  *    and fix the errors)
  *    Hint: What kinds of input are unacceptable? What kinds of
  *        acceptable input don't produce the correct answer?
- * 
+ *    I wrote an if statement into the code to check if the input was within the bounds given
  * 
  * 
  * 

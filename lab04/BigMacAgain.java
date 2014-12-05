@@ -14,9 +14,9 @@ public class BigMacAgain {
         double costPerBigMac=2.22;
         double totalBigMacCost=0;
         
-        if (input.hasNextInt()){
-            nBigMacs=input.nextInt();
-            totalBigMacCost=nBigMacs*costPerBigMac;
+        if (input.hasNextInt()){    //checks if user enterend and integer
+            nBigMacs=input.nextInt();   //setes te # of big macs to user input
+            totalBigMacCost=nBigMacs*costPerBigMac; //calculates cost
             System.out.printf("You ordered %2d Big Macs for a cost of %2dx2.22 = %2.2f %n",nBigMacs,nBigMacs,totalBigMacCost);
         
             }

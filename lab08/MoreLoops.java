@@ -16,11 +16,11 @@ public class MoreLoops{
 	}
 	*/
 	System.out.print("Enter an int- ");
-	if(!scan.hasNextInt()){
+	if(!scan.hasNextInt()){		//intitially checks if loops should run
     	do{
-    	    scan.next();
+    	    scan.next();		//clears input
     	    System.out.print("You did not enter an int; try again- ");
-    	}while(!scan.hasNextInt());
+    	}while(!scan.hasNextInt());	//while check
 	}
 	//COMMENT OUT THE ABOVE 5 LINES AND REPLACE THE CODE WITH A 
 	//DO-WHILE LOOP
@@ -32,15 +32,15 @@ public class MoreLoops{
 	    }
 	    System.out.println();
 	}*/
-	int j,k;
+	int j=0,k;	// creates counter variables
 	while(j<n && j<40){
-	    k=0;
+	    k=0;	//defines k as zero every time the outer loop runs
 	    while(k<j+1){
-	        System.out.print("*");
-	        k++;
+	        System.out.print("*");	//prints a star
+	        k++;	//increments k
 	    }
-	    System.out.println();
-	    j++;
+	    System.out.println();	//prints new line
+	    j++;	//increments j
 	}
 	//COMMENT OUT THE ABOVE SIX LINES OF CODE AND REPLACE WITH 
 	//WHILE STATEMENTS
@@ -53,9 +53,9 @@ public class MoreLoops{
 	    k++;
 	}
          while(k<4);*/
-    System.out.println("k="+k);
+    System.out.println("k="+k);	//prints k out intitially to replicate the first run of the loop
     while(k<4){
-        k++;
+        k++;	//increments k
         System.out.println("k="+k);
     }
         //COMMENT OUT THE ABOVE FIVE LINES AND REPLACE THE CODE
@@ -78,7 +78,8 @@ public class MoreLoops{
 	    if(count>10)
 		break;
 	}*/
-	for(int count=0;count<=10;count++){
+	for(int count=0;count<=10;count++){	//declared, intitialized and incremented count variable
+		//replaced switch statement with else if statements
 	    if(n<1 || n>5){
 	        System.out.println(n + " is > 5 or <1");
 	    }

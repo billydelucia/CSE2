@@ -12,7 +12,7 @@ public class Methods{
         Scanner input=new Scanner(System.in);
         int a, b, c;
         System.out.println("Enter three integers: ");
-        a=getInt(input);
+        a=getInt(input);    //callse getInt method to 
         b=getInt(input);
         c=getInt(input);
         System.out.println("The larger of "+a+" and "+b+" is "+larger(a,b));

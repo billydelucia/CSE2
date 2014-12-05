@@ -27,9 +27,9 @@ public class RandomGames{
             case 'R':
             case 'r': // Roulette code
                 System.out.print("Roulette: ");
-                int spin=(int) (Math.random()*38+1);
+                int spin=(int) (Math.random()*38+1); //creates random spin
                 switch (spin) {
-                    case 38: System.out.println("00"); break;
+                    case 38: System.out.println("00"); break;   // replaces 38 with double zero
                     default: System.out.println(spin);
                 }
             break;
@@ -54,15 +54,15 @@ public class RandomGames{
                     case 4: suitOut="Spades"; break;
                 }
                 if (card>=11 || card==1){
-                    switch (card) {
+                    switch (card) {     //checs if card is face card
                         case 11: cardOut="Jack"; break;
                         case 12: cardOut="Queen"; break;
                         case 13: cardOut="King"; break;
                         case 1: cardOut="Ace"; break;
                     }
-                    System.out.println("You picked a "+cardOut+" of "+suitOut);
+                    System.out.println("You picked a "+cardOut+" of "+suitOut); //prints out face card
                 } else{
-                    System.out.println("You picked a "+card+" of "+suitOut);
+                    System.out.println("You picked a "+card+" of "+suitOut);    //prints out normal card
                 }
             break;
             
